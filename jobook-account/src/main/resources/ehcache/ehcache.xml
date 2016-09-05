@@ -12,14 +12,14 @@
                   timeToIdleSeconds="3600"
                   timeToLiveSeconds="3600"/>
 
-    <cache name="baseCache"
+    <cache name="accountCache"
            eternal="false"
-           maxEntriesLocalHeap="200"
+           maxEntriesLocalHeap="0"
            overflowToDisk="false"
            diskPersistent="false"
-           timeToIdleSeconds="600"
+           timeToIdleSeconds="1800"
            statistics="true"
-           timeToLiveSeconds="600"/>
+           timeToLiveSeconds="1800"/>
 
     <!--
         eternal="false"   // 元素是否永恒,如果是就永不过期(必须设置)

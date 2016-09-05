@@ -1,0 +1,51 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <parent>
+        <artifactId>jobook-teacher</artifactId>
+        <groupId>com.jobook.teacher</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.jobook.teacher</groupId>
+    <artifactId>jobook-teacher-web</artifactId>
+    <packaging>war</packaging>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>com.jobook.teacher</groupId>
+            <artifactId>jobook-teacher-service</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <!--<dependency>-->
+            <!--<groupId>com.jobook.pay</groupId>-->
+            <!--<artifactId>jobook-pay-web</artifactId>-->
+            <!--<version>1.0.0-SNAPSHOT</version>-->
+            <!--<type>war</type>-->
+        <!--</dependency>-->
+
+        <!-- JSP、servlet 相关 -->
+        <dependency>
+            <groupId>jstl</groupId>
+            <artifactId>jstl</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jsp-api</artifactId>
+        </dependency>
+
+        <!--单元测试-->
+        <!--由于 junit 在父 pom 是 scope 是定义为 test，所以没办法有传递性，所以哪里要用到需要进行重新声明-->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+        </dependency>
+
+    </dependencies>
+</project>

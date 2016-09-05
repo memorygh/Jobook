@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>jobook-parent</artifactId>
+        <groupId>com.jobook.parent</groupId>
+        <version>1.0-SNAPSHOT</version>
+        <relativePath>../jobook-parent/pom.xml</relativePath>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>jobook-base</artifactId>
+
+    <!-- 添加依赖 -->
+    <dependencies>
+
+        <!-- 日志文件管理包 start-->
+        <!--下面这三个是配套使用：http://blog.csdn.net/woshiwxw765/article/details/7624556-->
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+        </dependency>
+        <!-- 日志文件管理包 end-->
+
+    </dependencies>
+
+</project>

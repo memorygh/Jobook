@@ -41,18 +41,20 @@ public class SysUserController {
 		//	设置ehcahe
 		CacheManager cacheManager = CacheManager.create();
 		Cache accountCache = cacheManager.getCache("accountCache");
-		accountCache.put(new Element(user.getId(), user));
+		accountCache.put(new Element(user.getPhone(), user));
 		return user;
 	}
 
-	@RequestMapping("/validAccountToJSONById/{userId}")
+	@RequestMapping("/validAccountToJSONByPhone/{phone}")
 	@ResponseBody
-	public SysUser validAccount(@PathVariable("userId") Integer userId){
+	public SysUser validAccount(@PathVariable("phone") String phone){
 		//	读取ehcahe
 		CacheManager cacheManager = CacheManager.create();
 		Cache accountCache = cacheManager.getCache("accountCache");
-		Element element = accountCache.get(userId);
-		SysUser user = (SysUser) element.getObjectValue();
+		Element element = accountCache.get(phone);
+		SysUser user = null;
+		if (element != null)
+			user = (SysUser) element.getObjectValue();
 		return user;
 	}
 	

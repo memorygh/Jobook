@@ -23,7 +23,7 @@
 
 <br>
 
-<a href="/sysUserController/validAccountToJSONById/1" target="_blank">验证用户信息并直接输出JSON数据</a>
+<a href="/sysUserController/validAccountToJSONByPhone/15101045301" target="_blank">验证用户信息并直接输出JSON数据</a>
 
 </body>
 </html>

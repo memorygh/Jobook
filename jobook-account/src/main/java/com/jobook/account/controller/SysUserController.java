@@ -7,7 +7,6 @@ import net.sf.ehcache.CacheManager;
 import net.sf.ehcache.Element;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -48,13 +47,17 @@ public class SysUserController {
 	@RequestMapping("/validAccountToJSONByPhone/{phone}")
 	@ResponseBody
 	public SysUser validAccount(@PathVariable("phone") String phone){
-		//	读取ehcahe
+		//	读取cahe
 		CacheManager cacheManager = CacheManager.create();
 		Cache accountCache = cacheManager.getCache("accountCache");
 		Element element = accountCache.get(phone);
 		SysUser user = null;
-		if (element != null)
+		//	如果缓存存在cache中,刷新cache
+		if (element != null) {
 			user = (SysUser) element.getObjectValue();
+			accountCache.remove(phone);
+			accountCache.put(new Element(user.getPhone(), user));
+		}
 		return user;
 	}
 	

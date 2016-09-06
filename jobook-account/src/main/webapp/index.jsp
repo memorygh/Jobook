@@ -19,11 +19,11 @@
 
 <br>
 
-<a href="/sysUserController/showUserToJSONById/1" target="_blank">查询用户信息并直接输出JSON数据</a>
+<a href="/sysUserController/showUserToJSONById/1" target="_blank">查询用户信息并直接输出JSON数据(模拟登录)</a>
 
 <br>
 
-<a href="/sysUserController/validAccountToJSONByPhone/15101045301" target="_blank">验证用户信息并直接输出JSON数据</a>
+<a href="/sysUserController/validAccountToJSONByPhone/15101045301" target="_blank">验证用户信息并直接输出JSON数据(验证用户Session(缓存实现))</a>
 
 </body>
 </html>
